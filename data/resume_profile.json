@@ -1,0 +1,59 @@
+{
+  "name": "Krish Lakhani",
+  "title": "Machine Learning Engineer and Data Scientist",
+  "about": "Results-driven ML Engineer and Data Scientist with experience in end-to-end ML systems, LLM-powered applications, and scalable data pipelines.",
+  "education": [
+    {
+      "institution": "Universal College of Engineering, University of Mumbai",
+      "degree": "Bachelor of Engineering in Computer Engineering",
+      "gpa": "8.79/10",
+      "duration": "Nov 2021 - May 2025",
+      "location": "Mumbai, India"
+    }
+  ],
+  "internships": [
+    {
+      "company": "Oasis Infobyte",
+      "role": "Data Scientist Intern",
+      "duration": "Feb 2024 - Sep 2024",
+      "highlights": [
+        "Executed data science projects including data cleaning, EDA, and predictive modeling.",
+        "Built classification models with 85%+ accuracy.",
+        "Developed automated preprocessing pipelines reducing manual handling time by around 40%."
+      ]
+    },
+    {
+      "company": "CognoRise Infotech",
+      "role": "Data Scientist Intern",
+      "duration": "Jan 2024 - Mar 2024",
+      "highlights": [
+        "Completed full data science lifecycle projects with 100K+ records.",
+        "Implemented validation pipelines for high data integrity.",
+        "Built customer segmentation models using K-means and hierarchical clustering."
+      ]
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "R", "JavaScript"],
+    "ml": ["PyTorch", "TensorFlow", "Keras", "NumPy", "Pandas", "Scikit-Learn", "OpenCV", "Hugging Face Transformers"],
+    "web": ["Flask", "FastAPI", "React", "ExpressJS", "Django", "Streamlit"],
+    "mlops": ["MLflow", "Apache Airflow", "Apache Kafka", "Ray", "Docker"],
+    "ai_tools": ["OpenAI API", "LangChain", "ChromaDB", "GPT-2", "DistilBERT"],
+    "databases": ["PostgreSQL", "MySQL", "MongoDB", "SQLite"]
+  },
+  "selected_projects": [
+    "Data Science Platform",
+    "Smart Expense Analyzer",
+    "SmartTaskAnalyser",
+    "Insight-Copilot"
+  ],
+  "contact": {
+    "email": "krishlakhani46767@gmail.com",
+    "phone": "+91 8928591979"
+  },
+  "source_files": [
+    "data/Krish_Lakhani.txt",
+    "data/Krish_Lakhani_1.txt",
+    "data/resume_merged.txt"
+  ]
+}

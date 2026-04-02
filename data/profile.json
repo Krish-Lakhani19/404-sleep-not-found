@@ -1,0 +1,33 @@
+{
+  "name": "Krish Lakhani",
+  "title": "Builder of useful things, clean experiences, and occasional debugging miracles",
+  "location": "India",
+  "tagline": "I write code that ships, scales, and occasionally tells a joke before coffee.",
+  "email": "krishlakhani46767@gmail.com",
+  "phone": "+91 8928591979",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/krishlakhani19/",
+    "github": "https://github.com/Krish-Lakhani19"
+  },
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "React",
+    "APIs",
+    "UI/UX",
+    "Problem Solving",
+    "Teamwork"
+  ],
+  "highlights": [
+    "Builds responsive interfaces that don't panic on mobile.",
+    "Loves turning messy requirements into clean products.",
+    "Cares about performance, accessibility, and pixel-level polish.",
+    "Debugging style: patient, systematic, and mildly dramatic."
+  ],
+  "funFacts": [
+    "I treat broken builds like crime scenes.",
+    "My tabs are organized chaos with excellent intentions.",
+    "I benchmark first, optimize second, celebrate third."
+  ]
+}

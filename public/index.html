@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krish Lakhani | Portfolio</title>
+    <meta
+      name="description"
+      content="Interactive portfolio of Krish Lakhani - projects, skills, humor, and clean code."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="siteLoader" class="site-loader" aria-live="polite">
+      <div class="loader-shell">
+        <div class="loader-header">
+          <span>KRISH.SYSTEM.BOOT</span>
+          <span id="loaderPercent" class="loader-percent">0%</span>
+        </div>
+        <div class="loader-screen">
+          <p id="loaderLineA" class="loader-line">Initializing creative engine...</p>
+          <p id="loaderLineB" class="loader-line">Warming up pixels...</p>
+          <div class="loader-bar">
+            <span id="loaderFill"></span>
+          </div>
+          <div class="loader-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="constellation" aria-hidden="true"></canvas>
+    <div class="bg-3d" aria-hidden="true">
+      <div id="bgScene3d" class="bg-scene-3d">
+        <div class="cube cube-bg">
+          <span class="face front"></span>
+          <span class="face back"></span>
+          <span class="face right"></span>
+          <span class="face left"></span>
+          <span class="face top"></span>
+          <span class="face bottom"></span>
+        </div>
+        <div class="ring ring-one"></div>
+        <div class="ring ring-two"></div>
+        <div class="ring ring-three"></div>
+      </div>
+    </div>
+
+    <header class="topbar glass">
+      <a href="#home" class="brand">Krish.dev</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#chat">Chat</a>
+      </nav>
+      <div class="top-actions">
+        <button id="themeToggle" class="chip" aria-label="Toggle theme">Theme</button>
+        <button id="menuToggle" class="chip mobile-only" aria-label="Open menu">Menu</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <p class="eyebrow reveal">Interactive portfolio</p>
+        <h1 class="reveal" id="heroName">Krish Lakhani</h1>
+        <p class="lead reveal" id="heroTagline">
+          I build smooth products, silly one-liners, and dependable backend systems.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">See Projects</a>
+          <a
+            id="githubBtn"
+            href="https://github.com/Krish-Lakhani19"
+            target="_blank"
+            rel="noreferrer"
+            class="btn btn-ghost"
+            >GitHub</a
+          >
+          <a
+            id="linkedinBtn"
+            href="https://www.linkedin.com/in/krishlakhani19/"
+            target="_blank"
+            rel="noreferrer"
+            class="btn btn-ghost"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="status-row reveal">
+          <span id="apiStatus" class="status-pill">Backend: checking...</span>
+          <span class="status-pill">Mode: Highly Deployable</span>
+          <span class="status-pill">Coffee: Optimistically Full</span>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <h2 class="section-title reveal">About Me</h2>
+        <div class="about-grid">
+          <article class="card reveal">
+            <h3>Builder Mindset</h3>
+            <p id="profileTitle">Loading profile...</p>
+            <p id="profileLocation" class="muted"></p>
+          </article>
+          <article class="card reveal">
+            <h3>Professional Highlights</h3>
+            <ul id="highlightsList" class="clean-list"></ul>
+          </article>
+          <article class="card reveal">
+            <h3>Fun Facts</h3>
+            <ul id="funFactsList" class="clean-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <h2 class="section-title reveal">Skills</h2>
+        <div id="skillsCloud" class="skills-cloud reveal"></div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-head reveal">
+          <h2 class="section-title">Latest Projects</h2>
+          <p class="muted">Auto-fetched from GitHub. If GitHub naps, fallback cards appear.</p>
+        </div>
+        <div id="projectGrid" class="project-grid"></div>
+      </section>
+
+      <section class="section" id="contact">
+        <h2 class="section-title reveal">Contact</h2>
+        <p class="muted reveal">Have a role, project, or impossible bug? Send a message.</p>
+
+        <div class="contact-cards reveal">
+          <article class="contact-card card">
+            <h3>Email</h3>
+            <a id="directEmail" href="mailto:krishlakhani46767@gmail.com"
+              >krishlakhani46767@gmail.com</a
+            >
+            <div class="icon-under" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path
+                  d="M3 6h18a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Zm0 2v.3l9 5.4 9-5.4V8l-9 5.4L3 8Z"
+                />
+              </svg>
+            </div>
+          </article>
+          <article class="contact-card card">
+            <h3>Phone</h3>
+            <a id="directPhone" href="tel:+918928591979">+91 8928591979</a>
+            <div class="icon-under" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path
+                  d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.45.55 1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C11.85 22 2 12.15 2 3a1 1 0 0 1 1-1h4.5a1 1 0 0 1 1 1 11 11 0 0 0 .55 3.45 1 1 0 0 1-.25 1l-2.2 2.35Z"
+                />
+              </svg>
+            </div>
+          </article>
+        </div>
+
+        <form id="contactForm" class="contact-form card reveal" novalidate>
+          <label>
+            Name
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required placeholder="you@example.com" />
+          </label>
+          <label>
+            Message
+            <textarea
+              name="message"
+              rows="5"
+              required
+              placeholder="Let's build something great."
+            ></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p id="formResult" class="muted"></p>
+        </form>
+      </section>
+
+      <section class="section" id="chat">
+        <h2 class="section-title reveal">Chat With KrishGPT</h2>
+        <p class="muted reveal">Ask about Krish, skills, projects, work style, or contact info.</p>
+        <div class="chatbot card reveal">
+          <div id="chatLog" class="chat-log" aria-live="polite">
+            <div class="chat-row bot">
+              <p>
+                Hi, I am KrishGPT. Ask me anything about Krish. I answer using resume, LinkedIn,
+                GitHub, and profile data.
+              </p>
+            </div>
+          </div>
+          <form id="chatForm" class="chat-form">
+            <input
+              id="chatInput"
+              type="text"
+              maxlength="280"
+              placeholder="Example: What are Krish's strongest skills?"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Ask</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Built with HTML, CSS, JS, Node, and one optimistic developer named Krish.</p>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

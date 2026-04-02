@@ -12,16 +12,7 @@
     }
   ],
   "internships": [
-    {
-      "company": "Nielsen",
-      "role": "Associate Data Scientist",
-      "duration": "Sep 2025 - Present",
-      "highlights": [
-        "Building and refining data science workflows for production-grade analytics use cases.",
-        "Collaborating with cross-functional teams to translate business questions into measurable ML outcomes.",
-        "Improving model quality, reliability, and reporting clarity for stakeholder-facing deliverables."
-      ]
-    },
+
     {
       "company": "Oasis Infobyte",
       "role": "Data Scientist Intern",

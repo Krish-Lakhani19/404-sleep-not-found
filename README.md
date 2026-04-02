@@ -1,4 +1,4 @@
-# Krish Lakhani - Personal Portfolio Story
+# Personal Portfolio Story
 
 Hi, I am **Krish Lakhani**.
 

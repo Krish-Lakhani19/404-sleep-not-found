@@ -400,6 +400,13 @@ function buildKnowledgeBase() {
     (intern.highlights || []).forEach((h) => pushChunk("resume", h));
   });
 
+  (resumeProfile.certifications || []).forEach((cert) => {
+    pushChunk(
+      "resume",
+      `Certification: ${cert.name || ""} from ${cert.issuer || ""} (${cert.date || ""}).`
+    );
+  });
+
   Object.entries(resumeProfile.skills || {}).forEach(([group, values]) => {
     if (Array.isArray(values) && values.length) {
       pushChunk("resume", `${group} skills: ${values.join(", ")}.`);
@@ -531,6 +538,12 @@ async function handleApi(req, res, pathname) {
   if (pathname === "/api/profile" && req.method === "GET") {
     const profile = readJsonFile(PROFILE_PATH, {});
     sendJson(res, 200, profile);
+    return;
+  }
+
+  if (pathname === "/api/resume" && req.method === "GET") {
+    const resume = readJsonFile(RESUME_PROFILE_PATH, {});
+    sendJson(res, 200, resume);
     return;
   }
 

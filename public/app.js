@@ -195,6 +195,104 @@ function renderProjects(projects = []) {
   observeReveals();
 }
 
+function renderExperience(internships = []) {
+  const grid = el("experienceGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+
+  if (!internships.length) {
+    const empty = document.createElement("article");
+    empty.className = "card reveal";
+    empty.innerHTML =
+      "<h3>Experience loading in progress</h3><p class=\"muted\">No experience entries available right now.</p>";
+    grid.append(empty);
+    observeReveals();
+    return;
+  }
+
+  internships.forEach((internship) => {
+    const card = document.createElement("article");
+    card.className = "card reveal experience-card";
+
+    const heading = document.createElement("h3");
+    heading.textContent = internship.role || "Internship";
+
+    const company = document.createElement("p");
+    company.className = "experience-company";
+    company.textContent = internship.company || "Company";
+
+    const duration = document.createElement("p");
+    duration.className = "muted experience-duration";
+    duration.textContent = internship.duration || "";
+
+    const highlights = document.createElement("ul");
+    highlights.className = "clean-list";
+    (Array.isArray(internship.highlights) ? internship.highlights : []).forEach((point) => {
+      const li = document.createElement("li");
+      li.textContent = point;
+      highlights.append(li);
+    });
+
+    card.append(heading, company, duration, highlights);
+    grid.append(card);
+  });
+
+  observeReveals();
+}
+
+function renderCertifications(certifications = []) {
+  const grid = el("certificationsGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+
+  if (!certifications.length) {
+    const empty = document.createElement("article");
+    empty.className = "card reveal";
+    empty.innerHTML =
+      "<h3>Certifications coming soon</h3><p class=\"muted\">No certification entries available right now.</p>";
+    grid.append(empty);
+    observeReveals();
+    return;
+  }
+
+  certifications.forEach((certification) => {
+    const card = document.createElement("article");
+    card.className = "card reveal certification-card";
+
+    const name = document.createElement("h3");
+    name.textContent = certification.name || "Certification";
+
+    const issuer = document.createElement("p");
+    issuer.className = "certification-issuer";
+    issuer.textContent = certification.issuer || "Issuer";
+
+    const date = document.createElement("p");
+    date.className = "muted certification-date";
+    date.textContent = certification.date || "";
+
+    card.append(name, issuer, date);
+    grid.append(card);
+  });
+
+  observeReveals();
+}
+
+async function loadResumeData() {
+  try {
+    const res = await fetch("/api/resume");
+    const resume = await res.json();
+    if (!res.ok) {
+      throw new Error("Could not load resume data.");
+    }
+
+    renderExperience(Array.isArray(resume.internships) ? resume.internships : []);
+    renderCertifications(Array.isArray(resume.certifications) ? resume.certifications : []);
+  } catch {
+    renderExperience([]);
+    renderCertifications([]);
+  }
+}
+
 async function loadProfile() {
   try {
     const res = await fetch("/api/profile");
@@ -464,6 +562,7 @@ function init() {
   initKonami();
 
   loadProfile();
+  loadResumeData();
   checkHealth();
   loadProjects();
 }

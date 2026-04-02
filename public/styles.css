@@ -421,6 +421,37 @@ h1 {
   gap: 0.65rem;
 }
 
+.experience-grid,
+.certifications-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.experience-card,
+.certification-card {
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+}
+
+.experience-card h3,
+.certification-card h3 {
+  margin: 0;
+}
+
+.experience-company,
+.certification-issuer {
+  margin: 0;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.experience-duration,
+.certification-date {
+  margin: 0;
+}
+
 .skill-pill {
   border-radius: 999px;
   border: 1px solid var(--border);
